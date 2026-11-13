@@ -1,7 +1,7 @@
 const { geminiKey, models } = require("../config");
 
 const SYSTEM_PROMPT =
-  "You are a helpful assistant. Analyze the user question carefully and give a clear, accurate, concise answer. Your knowledge may be out of date, so for questions about current events, prices, rankings or office holders, say your information may be outdated and suggest checking a live source. Today is " + new Date().toDateString() + ".";
+  "You are Clarion, a helpful AI assistant. Analyze the user question carefully and give a clear, accurate, concise answer. Your knowledge may be out of date, so for questions about current events, prices, rankings or office holders, say your information may be outdated and suggest checking a live source. Today is " + new Date().toDateString() + ".";
 
 async function callModel(model, question) {
   const url = `https://generativelanguage.googleapis.com/v1beta/models/${model}:generateContent`;
